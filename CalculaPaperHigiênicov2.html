@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Paper Higiênico 2.0</title>
+</head>
+<body>
+    <h1>Bem vindo ao grandioso Calcula Paper Higiênico 2.0®!!!</h1> <br>
+    
+    <label for="inputBosta">Peso da Bosta (em gramas):</label>
+    <input type="number" id="inputBosta" name="inputBosta"> <br> <br>
+    <label for="inputPaper">Tamanho do Paper (em centímetros):</label>
+    <input type="number" id="inputPaper" name="inputPaper"> <br> <br>
+
+    
+    <button onclick="calcularPapelHigienico()">Calcular</button><br><br>
+
+    <div id="resultado">Resposta aqui!</div> <br> <br>
+
+    <h2>Feito com carinho por Hugo!</h2>
+    
+
+    <script>
+        function calcularPapelHigienico() {
+            let pesoBosta = parseFloat(document.getElementById("inputBosta").value);
+            let tamanhoPaper = parseFloat(document.getElementById("inputPaper").value);
+            let folhasPorBosta = 0;
+            
+            if (pesoBosta == 0) {
+                document.getElementById("resultado").innerText = "Por que diabos você está calculando se você nem cagou??"
+            } else if (pesoBosta < 0) {
+                document.getElementById("resultado").innerText = "Ué, não sabia que existia bosta negativa"
+            } else if (pesoBosta == 69000 || pesoBosta == 69) {
+                document.getElementById("resultado").innerText = "Engraçadinho..."
+            } else {
+                if (tamanhoPaper <= 15) {
+                    let folhasPorBosta = 4;
+                    let quantidadePaperHigienico = Math.ceil(pesoBosta / 160 * folhasPorBosta);
+                    let metrosPaper = (quantidadePaperHigienico * tamanhoPaper) / 100; 
+                    document.getElementById("resultado").innerHTML = "Você precisa de " + quantidadePaperHigienico + " folhas de papel higiênico, ou aproximadamente " + metrosPaper.toFixed(2) + " metros.";
+                } else if (tamanhoPaper <= 30) {
+                    let folhasPorBosta = 3;
+                    let quantidadePaperHigienico = Math.ceil(pesoBosta / 160 * folhasPorBosta);
+                    let metrosPaper = (quantidadePaperHigienico * tamanhoPaper) / 100; 
+                    document.getElementById("resultado").innerHTML = "Você precisa de " + quantidadePaperHigienico + " folhas de papel higiênico, ou aproximadamente " + metrosPaper.toFixed(2) + " metros.";
+                } else if (tamanhoPaper <= 50) {
+                    let folhasPorBosta = 2;
+                    let quantidadePaperHigienico = Math.ceil(pesoBosta / 160 * folhasPorBosta);
+                    let metrosPaper = (quantidadePaperHigienico * tamanhoPaper) / 100; 
+                    document.getElementById("resultado").innerHTML = "Você precisa de " + quantidadePaperHigienico + " folhas de papel higiênico, ou aproximadamente " + metrosPaper.toFixed(2) + " metros.";
+                } else {
+                    let folhasPorBosta = 1;
+                    let quantidadePaperHigienico = Math.ceil(pesoBosta / 160 * folhasPorBosta);
+                    let metrosPaper = (quantidadePaperHigienico * tamanhoPaper) / 100; 
+                    document.getElementById("resultado").innerHTML = "Você precisa de " + quantidadePaperHigienico + " folhas de papel higiênico, ou aproximadamente " + metrosPaper.toFixed(2) + " metros.";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
