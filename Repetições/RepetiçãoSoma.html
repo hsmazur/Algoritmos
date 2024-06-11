@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Coloque numero</label>
+    <input type="number" name="num" id="num"> <br>
+
+    <input type="button" value="Somar" onclick="somar()"> <br>
+
+    <span id="resp"></span>
+
+    <script>
+        function somar() {
+            let num = parseInt(document.getElementById("num").value);
+            let soma = 0;
+            for (let i = 1; i<=num; i++) {
+                soma = soma + i;
+            }
+            document.getElementById("resp").textContent = soma;
+        }
+    </script>
+
+</body>
+</html> 

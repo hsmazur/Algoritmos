@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="frase">Frase:</label>
+    <input type="text" name="frase" id="frase">
+    <br>
+    <br>
+    <input type="button" value="repetir" onclick="repetir()">
+    <br>
+    <div id="resultado"></div>
+    
+
+    <script>
+        function repetir() {
+            let nome = document.getElementById("frase").value;
+            let resp  = document.getElementById("resultado");
+            resp.innerHTML = "";
+            for (let i = 1; i <= 10; i++){
+                resp.innerHTML += i + " " + nome + "<br>" ; 
+            }
+            
+
+        }
+</script>
+</body>
+</html>
