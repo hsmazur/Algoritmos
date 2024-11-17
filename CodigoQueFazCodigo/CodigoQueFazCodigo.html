@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar</title>
+</head>
+
+<body>
+    <h1>Crie um código automaticamente!</h1>
+    <label for="inputNomeClasse">Classe:</label>
+    <input type="text" id="inputNomeClasse"><br>
+    <label for="inputAtributos">Atributos: </label>
+    <input type="text" id="inputAtributos" style="width: 500px;"><br>
+    <label for="inputTipos">Tipos:</label>
+    <input type="text" name="inputTipos" id="inputTipos" style="width: 500px;"> <br><br>
+
+    <input type="button" value="Model" onclick="gerarModel()">
+    <input type="button" value="View" onclick="gerarView()">
+    <input type="button" value="Controller" onclick="gerarController()">
+    <input type="button" value="Copiar Texto" onclick="copiarTexto()">
+
+    <br><br>
+    <textarea name="taCodigoFonte" id="taCodigoFonte" cols="183" rows="40" spellcheck="false" readonly></textarea>
+
+    <script src="./CodigoQueFazCodigo.js"></script>
+
+</body>
+
+</html>
