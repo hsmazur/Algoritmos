@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Carro</title>
+</head> 
+
+<body> 
+
+    <h1>Cadastro de veículos</h1>
+
+    <label for="placa">Placa:</label>
+    <input type="text" name="placa" id="placa" maxlength="8" placeholder="Ex: ABC-1D23" oninput="verificarPlaca(event)">
+
+    <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+    <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+    <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+    <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+
+    <br><br>
+
+    <label for="nome">Modelo:</label>
+    <input type="text" name="nome" id="nome" spellcheck="false">
+
+    <br><br>
+
+    <label for="marca">Marca:</label>
+    <input type="text" name="marca" id="marca" spellcheck="false">
+
+    <br><br>
+
+    <label for="dataLanc">Data de Lançamento:</label>
+    <input type="date" name="dataLanc" id="dataLanc">
+
+    <br><br>
+
+    <label for="kmRodados">Quilômetros Rodados:</label>
+    <input type="number" name="kmRodados" id="kmRodados" min="0">
+
+    <br><br>
+
+    <label for="cor">Cor:</label>
+    <input type="text" name="cor" id="cor">
+
+    <br><br>
+
+    <div id="divAviso" style="background-color: antiquewhite;"></div>
+    <br>
+    <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+    <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+    <br><br>
+    <div id="outputSaida" style="background-color: aqua;">...</div>
+    
+    <br><br>
+    <input type="button" value="Salvar dados" onclick="prepararESalvarCSV()">
+    <input type="button" value="Buscar dados salvos" onclick="abrirArquivoSalvoEmLocalPermanente()">
+
+
+    <script src="./Carro.js"></script>
+    <script src="./CarroControle.js"></script>
+</body>
+</html>
