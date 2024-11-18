@@ -3,6 +3,15 @@ let oQueEstaFazendo = '';
 let carro = null;
 bloquearAtributos(true);
 
+//ver se a placa está digitada corretamente
+function verificarPlaca(event) {
+    const input = event.target;
+    let valor = input.value.toUpperCase().replace(/[^A-Z0-9]/g, ''); 
+    if (valor.length > 3) valor = valor.slice(0, 3) + '-' + valor.slice(3); 
+    input.value = valor.slice(0, 8); 
+}
+
+//CRUD normal
 function inserirDadosIniciais() {
     listaCarro.push(new Carro('ADQ-5T51', 'Fusca', 'Volkswagen', '1975-06-15', '361492', 'Preto'));
     listaCarro.push(new Carro('HSM-1N16', 'Civic', 'Honda', '2024-02-11', '0', 'Branco'));
@@ -11,14 +20,6 @@ function inserirDadosIniciais() {
     listaCarro.push(new Carro('EWL-3O94', 'Focus', 'Ford', '2024-05-11', '0', 'Vermelho'));
     listaCarro.push(new Carro('VOE-8R01', 'Onix', 'Chevrolet', '2018-03-29', '58570', 'Branco'));
     listar();
-
-}
-
-function verificarPlaca(event) {
-    const input = event.target;
-    let valor = input.value.toUpperCase().replace(/[^A-Z0-9]/g, ''); 
-    if (valor.length > 3) valor = valor.slice(0, 3) + '-' + valor.slice(3); 
-    input.value = valor.slice(0, 8); 
 }
 
 function procurePorChavePrimaria(chave) {
