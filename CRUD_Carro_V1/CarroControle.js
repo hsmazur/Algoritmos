@@ -143,7 +143,7 @@ function preparaListagem(vetor) {
         linha.marca+" - "+ 
         linha.dataLanc+" - "+ 
         linha.kmRodados+" km - "+ 
-        linha.cor+"<br>";
+        linha.cor+"<br><br>";
     }
     return texto;
 }
