@@ -1,0 +1,92 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #bdbddde5;
+    color: #1f1f1f;
+    margin: 0;
+    padding: 0;
+}
+.title {
+    color: #101110;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+
+}
+.interface {
+    color: #101110;
+    text-align: center;
+    font-size: 30px;
+}
+.interface input {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: white;
+    border: 0.8px solid black;
+    border-radius: 30px;
+    padding: 5px;
+}
+.divAviso {
+    text-align: center;
+    font-size: 25px;
+} 
+.botoes {
+    text-align: center;
+}
+.btSalvar {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 240px; 
+    height: 35px; 
+    background-color: #ffffff; 
+    color: rgb(63, 62, 62); 
+    cursor: pointer; 
+    border-width: thin;
+    border-radius: 30px;
+}
+.btCancelar {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 240px; 
+    height: 35px; 
+    background-color: #ffffff; 
+    color: rgb(63, 62, 62); 
+    cursor: pointer; 
+    border-width: thin;    
+    border-radius: 30px;
+}
+.outputSaida {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    height: auto;
+    width: auto;
+    background-color: whitesmoke;
+    border: 0.5px, solid, black;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.botoesDados {
+    text-align: center;
+}
+.salvarDados {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 240px; 
+    height: 35px; 
+    background-color: #ffffff; 
+    color: rgb(63, 62, 62); 
+    cursor: pointer; 
+    border-width: thin;
+    border-radius: 30px;
+}
+.buscarDados {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 240px; 
+    height: 35px; 
+    background-color: #ffffff; 
+    color: rgb(63, 62, 62); 
+    cursor: pointer; 
+    border-width: thin;
+    border-radius: 30px;
+}
