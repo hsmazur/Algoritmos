@@ -176,6 +176,7 @@ function visibilidadeDosBotoes(btProcure, btInserir, btAlterar, btExcluir, btSal
     document.getElementById("id").focus();
 }
 
+//salvamento no disco
 function prepararESalvarCSV() {
     let nomeDoArquivoDestino = "./Bicicleta.csv";
     let textoCSV = "";
@@ -241,6 +242,7 @@ function converterDeCSVparaListaObjeto(arquivo) {
     leitor.readAsText(arquivo);
 }
 
+//funcoes pedidas segunda passada
 function procurarPorPeso() {
     const pesoInformado = parseFloat(document.getElementById("pesoInformado").value);
     let texto = "";
@@ -263,6 +265,7 @@ function procurarPorPeso() {
         document.getElementById("outputSaida").innerHTML = texto;
     }
 }
+
 function procurarPreco() {
     let menorPreco = listaBicicleta[0].preco
 
