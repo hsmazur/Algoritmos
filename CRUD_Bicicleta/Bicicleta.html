@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Bicicleta</title>
+</head> 
+
+<body> 
+
+    <label for="id">id:</label>
+    <input type="number" name="id" id="id">
+
+    <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+    <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+    <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+    <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+
+    <br><br>
+
+    <label for="nome">nome:</label>
+    <input type="text" name="nome" id="nome">
+
+    <br><br>
+
+    <label for="fabricante">fabricante:</label>
+    <input type="text" name="fabricante" id="fabricante">
+
+    <br><br>
+
+    <label for="dataDeLancamento">dataDeLancamento:</label>
+    <input type="date" name="dataDeLancamento" id="dataDeLancamento">
+
+    <br><br>
+
+    <label for="preco">preco:</label>
+    <input type="number" name="preco" id="preco">
+
+    <br><br>
+
+    <label for="peso">peso:</label>
+    <input type="number" name="peso" id="peso">
+
+    <br><br>
+
+    <div id="divAviso" style="background-color: antiquewhite;"></div>
+    <br>
+    <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+    <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+    <br><br>
+    <div id="outputSaida" style="background-color: aqua;">...</div> <br> <br> 
+
+    <script src="./Bicicleta.js"></script>
+    <script src="./BicicletaControle.js"></script>
+
+    <input type="button" value="Salvar dados" onclick="prepararESalvarCSV()">
+    <input type="button" value="Buscar dados salvos" onclick="abrirArquivoSalvoEmLocalPermanente()">
+
+    <input type="number" name="pesoInformado" id="pesoInformado">
+    <button type="button" onclick="procurarPorPeso()">Procurar</button> <br> <br>
+
+    <button onclick="procurarPreco()">Procurar mais barato</button> 
+
+</body>
+</html>
